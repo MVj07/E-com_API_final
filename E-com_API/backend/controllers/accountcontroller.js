@@ -21,7 +21,7 @@ const _signup_=async(req, res)=>{
                 await _newacc_.save()
                 res.status(201).json({'dt': 'Account created successfully'})
             }else{
-                res.status(500).json({'dt': 'User already exists'})
+                res.status(404).json({'dt': 'User already exists'})
             }
         }
         else{
@@ -29,7 +29,7 @@ const _signup_=async(req, res)=>{
         }
     } catch (error) {
         console.log(error)
-        res.status(404).json({'dt': 'Something went wrong'})
+        res.status(500).json({'dt': 'Something went wrong'})
     }
 }
 
@@ -46,16 +46,16 @@ const _login_=async(req, res)=>{
                     let _token_ = jwt.sign({id: _user_._id, role: _user_.role.name}, process.env.JWT_SECRET, {expiresIn: '1hr'})
                     return res.status(200).json({'dt': _token_})
                 } else {
-                    return res.status(400).json({'dt': 'Invalid email or password'})        
+                    return res.status(404).json({'dt': 'Invalid email or password'})        
                 }
             }
-            return res.status(400).json({'dt': 'Account not found!'})
+            return res.status(404).json({'dt': 'Account not found!'})
         } else {
-            res.status(200).json({'dt': 'One of the credential were not provided'})
+            res.status(404).json({'dt': 'One of the credential were not provided'})
         }
     } catch (err){
         console.log(err)
-        res.status(404).json({'dt': 'Something went wrong'})
+        res.status(500).json({'dt': 'Something went wrong'})
     }
 }
 

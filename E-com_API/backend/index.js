@@ -2,9 +2,13 @@ const express = require('express')
 const {connect, connection} = require('mongoose')
 const {json} = require('body-parser')
 const dotenv = require('dotenv')
+const cors = require('cors')
 
 dotenv.config()
 const app=express()
+
+// enable cors
+app.use(cors());
 
 // All Routes
 // app.use("/staffs", staffRouter)

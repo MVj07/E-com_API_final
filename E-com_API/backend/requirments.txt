@@ -5,3 +5,4 @@ libraries:
     npm install body-parser
     npm install jsonwebtoken
     npm install bcrypt
+    npm install cors

@@ -594,6 +594,31 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "vendors_and_their_product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTg1ZjEzNDE0NzliZjlhZDJiMzNkZiIsImlhdCI6MTczODEyMTU5NiwiZXhwIjoxNzM4MTI1MTk2fQ.4MRLJSoXA4DRktCWIpNA3ZaiE4pW4f6BJeBV8RLPC0Q",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/product/vendor",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product",
+						"vendor"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

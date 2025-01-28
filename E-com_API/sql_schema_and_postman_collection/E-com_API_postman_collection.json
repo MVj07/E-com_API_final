@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "345f7655-0490-4cee-bc87-62d506f24ddf",
+		"name": "E-commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "vendor_signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uname\": \"user1\",\r\n    \"mail\": \"vijay123@gmail.com\",\r\n    \"pass\": \"admin@123\",\r\n    \"role\": \"vendor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/account/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uname\": \"user3\",\r\n    \"mail\": \"testmail123@gmail.com\",\r\n    \"pass\": \"admin@123\",\r\n    \"role\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/account/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTk0YmQxOWZkZmJjNzJkZTg4ODE3ZSIsImlhdCI6MTczODA5OTc2NiwiZXhwIjoxNzM4MTAzMzY2fQ.nFTHKHl-jB6yKPGEuTDA8XKcuepnwX0Q7JzpB0eYrtU",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"maduraiveeran@appkodes.com\",\r\n    \"pass\": \"Johnydepp7&\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/account/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"msvijay6661@gmail.com\",\r\n    \"pass\": \"admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/account/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vendor_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"msvijay6662@gmail.com\",\r\n    \"pass\": \"admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/account/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "staff_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"vijay321@gmail.com\",\r\n    \"pass\": \"admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/account/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_allusers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTg2M2ZhZTRiMGMxYmM0YzEzMjAzMCIsImlhdCI6MTczODEwMDAxMywiZXhwIjoxNzM4MTAzNjEzfQ.wLXo4aFrJvnQG2boFjND6F9EFlGHih9kTTEqHWv5BnQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/admin/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_create_staff",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTg2M2ZhZTRiMGMxYmM0YzEzMjAzMCIsImlhdCI6MTczODEwMDAxMywiZXhwIjoxNzM4MTAzNjEzfQ.wLXo4aFrJvnQG2boFjND6F9EFlGHih9kTTEqHWv5BnQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user2\",\r\n    \"email\": \"vijay321@gmail.com\",\r\n    \"password\": \"admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/admin/staff",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"staff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_view_all_products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTg2M2ZhZTRiMGMxYmM0YzEzMjAzMCIsImlhdCI6MTczODEwMDAxMywiZXhwIjoxNzM4MTAzNjEzfQ.wLXo4aFrJvnQG2boFjND6F9EFlGHih9kTTEqHWv5BnQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/admin/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_products_to_all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTg1ZTI2NjAzMzliZmNjNmYwMTRhYiIsImlhdCI6MTczODEwMDY1MywiZXhwIjoxNzM4MTA0MjUzfQ.cFDxWsnydtU2Bm4sgFpJhuN1QS1qk10rF_hQmx55uS4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/product",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_products_to_all_with_search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTg1ZTI2NjAzMzliZmNjNmYwMTRhYiIsImlhdCI6MTczODEwMDY1MywiZXhwIjoxNzM4MTA0MjUzfQ.cFDxWsnydtU2Bm4sgFpJhuN1QS1qk10rF_hQmx55uS4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/product?search=mobile",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "mobile"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vendor_add_product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTg1ZjEzNDE0NzliZjlhZDJiMzNkZiIsImlhdCI6MTczODEwMTAwNCwiZXhwIjoxNzM4MTA0NjA0fQ.qsm08o3KH1ZBckgffQkTbsdfJLhylfmi3dWYvoDC6og",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mobile",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "The Brand new mobile",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "15000",
+							"type": "default"
+						},
+						{
+							"key": "oldPrice",
+							"value": "17000",
+							"type": "default"
+						},
+						{
+							"key": "freeDelivery",
+							"value": "false",
+							"type": "default"
+						},
+						{
+							"key": "deliveryAmount",
+							"value": "48",
+							"type": "default"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-01-28",
+							"type": "default"
+						},
+						{
+							"key": "products",
+							"type": "file",
+							"src": [
+								"/E:/MS DHONI 07/889999.jpeg",
+								"/E:/MS DHONI 07/1088620.jpg"
+							]
+						},
+						{
+							"key": "category",
+							"value": "Electronics",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/product",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "staff_add_product_for_assigned_vendor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTk0ZTM1MjJkNzc0Nzk5MTlhNzg1YSIsImlhdCI6MTczODEwMTM0MCwiZXhwIjoxNzM4MTA0OTQwfQ.HAVp8SS1iAyUkzc4sn8L6tmf1NMzJcqBz-jhlHlhsD8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Laptop",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Brand new laptop",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "electronics",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "30000",
+							"type": "default"
+						},
+						{
+							"key": "oldPrice",
+							"value": "33000",
+							"type": "default"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-01-28",
+							"type": "default"
+						},
+						{
+							"key": "freeDelivery",
+							"value": "true",
+							"type": "default"
+						},
+						{
+							"key": "delieryAmount",
+							"value": "0",
+							"type": "default"
+						},
+						{
+							"key": "vendor",
+							"value": "vijay123@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "products",
+							"type": "file",
+							"src": "/E:/MS DHONI 07/889999.jpeg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/staff",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"staff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "staff_view_products_for_assigned_vendors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTk0ZTM1MjJkNzc0Nzk5MTlhNzg1YSIsImlhdCI6MTczODEwMTM0MCwiZXhwIjoxNzM4MTA0OTQwfQ.HAVp8SS1iAyUkzc4sn8L6tmf1NMzJcqBz-jhlHlhsD8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/staff?vendor=vijay123@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"staff"
+					],
+					"query": [
+						{
+							"key": "vendor",
+							"value": "vijay123@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_add_product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTg2M2ZhZTRiMGMxYmM0YzEzMjAzMCIsImlhdCI6MTczODEwMDAxMywiZXhwIjoxNzM4MTAzNjEzfQ.wLXo4aFrJvnQG2boFjND6F9EFlGHih9kTTEqHWv5BnQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "product1",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "product description",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "default"
+						},
+						{
+							"key": "oldPrice",
+							"value": "120",
+							"type": "default"
+						},
+						{
+							"key": "startDate",
+							"value": "2025-01-27",
+							"type": "default"
+						},
+						{
+							"key": "freeDelivery",
+							"value": "false",
+							"type": "default"
+						},
+						{
+							"key": "deliveryAmount",
+							"value": "15",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "product category",
+							"type": "default"
+						},
+						{
+							"key": "products",
+							"type": "file",
+							"src": "/E:/MS DHONI 07/67888.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/product",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

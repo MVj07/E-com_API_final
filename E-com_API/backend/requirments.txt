@@ -1,0 +1,7 @@
+libraries:
+    npm install multer
+    npm install dotenv
+    npm install mongoose
+    npm install body-parser
+    npm install jsonwebtoken
+    npm install bcrypt
